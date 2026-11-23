@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RPG Creator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>RPG Creator</h1>
+        <p>Crie sua própria aventura</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Bem-vindo ao RPG Creator</h2>
+            <p>
+                Crie seus próprios mundos, personagens
+                e histórias. Defina suas regras
+                e comece uma nova aventura.
+            </p>
+        </section>
+
+        <section>
+            <h2>Como você deseja começar?</h2>
+
+            <button type="button" id="btn-criar">
+                Criar sala
+            </button>
+
+            <button type="button" id="btn-entrar">
+                Entrar em uma sala
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>RPG Creator - 2026</p>
+    </footer>
+
+    <div id="popup-criar" class="popup">
+        <div class="popup-conteudo">
+
+            <button type="button" class="fechar">
+                &times;
+            </button>
+
+            <h2>Criar nova sala</h2>
+
+            <label for="nome-rpg">Nome do RPG</label>
+            <input type="text" id="nome-rpg"
+                   placeholder="Nome da aventura">
+
+            <label for="descricao-rpg">Descrição</label>
+            <textarea id="descricao-rpg"
+                      placeholder="Descreva sua aventura"></textarea>
+
+            <button type="button" id="confirmar-criar">
+                Próximo
+            </button>
+
+        </div>
+    </div>
+
+    <div id="popup-entrar" class="popup">
+        <div class="popup-conteudo">
+
+            <button type="button" class="fechar">
+                &times;
+            </button>
+
+            <h2>Entrar em uma sala</h2>
+
+            <label for="codigo-sala">Código da sala</label>
+            <input type="text" id="codigo-sala"
+                   placeholder="Digite o código">
+
+            <button type="button" id="confirmar-entrar">Entrar</button>
+
+        </div>
+    </div>
+
+    <div id="painel-mestre" class="painel-novo">
+        <h1>Painel do Mestre</h1>
+        <h2 id="titulo-sala"></h2>
+        <p id="descricao-sala"></p>
+
+        <div class="cartao-painel">
+            <h2>Código da sala</h2>
+            <p id="codigo-gerado"></p>
+            <button id="copiar-codigo" type="button">
+                Copiar código
+            </button>
+        </div>
+
+        <nav class="menu-mestre">
+            <h2>Configurações</h2>
+            <ul>
+                <li>
+                    <button type="button" id="abrir-mundo">
+                        Mundo e história
+                    </button>
+                </li>
+                <li>Regras</li>
+                <li>Atributos e pontos</li>
+                <li>Raças e classes</li>
+                <li>Dados</li>
+                <li>Personagens</li>
+            </ul>
+        </nav>
+
+    <section id="editor-mundo" class="editor-mundo">
+
+        <h2>Mundo e história</h2>
+
+        <label for="historia-mundo">
+            História geral do mundo
+        </label>
+
+        <textarea id="historia-mundo"
+            placeholder="Descreva a história do seu mundo...">
+        </textarea>
+
+        <h3>Locais do mundo</h3>
+
+        <div id="lista-locais"></div>
+
+        <button type="button" id="adicionar-local">
+            + Adicionar local
+        </button>
+
+        <button type="button" id="salvar-mundo">
+            Salvar mundo
+        </button>
+
+        <p id="mensagem-mundo" role="status"></p>
+
+    </section>
+
+        <button class="voltar-inicio" type="button">
+            Voltar ao início
+        </button>
+    </div>
+
+    <div id="painel-jogador" class="painel-novo">
+        <h1>Criar personagem</h1>
+        <p id="sala-jogador"></p>
+
+        <div class="cartao-painel">
+            <label for="nome-personagem">
+                Nome do personagem
+            </label>
+            <input id="nome-personagem" type="text">
+
+            <label for="raca-personagem">Raça</label>
+            <input id="raca-personagem" type="text">
+
+            <label for="classe-personagem">Classe</label>
+            <input id="classe-personagem" type="text">
+
+            <label for="historia-personagem">
+                História do personagem
+            </label>
+            <textarea id="historia-personagem"></textarea>
+
+            <button id="salvar-personagem" type="button">
+                Salvar personagem
+            </button>
+            <p id="mensagem-personagem" role="status"></p>
+        </div>
+
+        <button class="voltar-inicio" type="button">
+            Voltar ao início
+        </button>
+    </div>
+
+</body>
+</html>
